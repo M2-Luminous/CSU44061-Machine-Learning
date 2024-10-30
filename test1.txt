@@ -1,0 +1,33 @@
+10.769704 M parameters
+step 0: train loss 3.7685, val loss 3.7635
+step 100: train loss 1.8107, val loss 1.8251
+step 200: train loss 0.3764, val loss 0.4187
+step 300: train loss 0.3167, val loss 0.3868
+step 400: train loss 0.2602, val loss 0.4238
+step 500: train loss 0.1690, val loss 0.5309
+step 600: train loss 0.0744, val loss 0.6955
+step 700: train loss 0.0467, val loss 0.8006
+step 800: train loss 0.0415, val loss 0.8883
+step 900: train loss 0.0394, val loss 0.9473
+step 999: train loss 0.0376, val loss 0.9674
+
+I run fast More ore bubbles
+I hide My teddy
+I want cookie Come here
+I jump high No touch
+Uh oh spill I sing
+No tinight No nap
+I tired mokie wash hands
+I hide I want cookie
+I hungry Come here
+Big truck I jump high
+Yummmy apple Look moon
+I sing Daddy read me dinose
+I sing Daddy read me dinosaur book before bed
+Where ball Look airplane
+Help me please Read book
+Go park Uh oh spill
+Daddy read me dinose Yummy apple
+I see bird Daddy read me dinosaur book before bed
+Yummy appple Mama I want ple
+What is

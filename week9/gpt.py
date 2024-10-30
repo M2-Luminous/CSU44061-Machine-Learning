@@ -20,7 +20,7 @@ torch.manual_seed(1337)
 
 # wget https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt
 # Invoke-WebRequest -Uri "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt" -OutFile "input.txt"
-with open('C:/Users/M2-Winterfell/Downloads/ML/CSU44061-Machine-Learning/week9/input_childSpeech_trainingSet.txt', 'r', encoding='utf-8') as f:
+with open('C:/Users/M2-Winterfell/Downloads/ML/CSU44061-Machine-Learning/week9/input_shakespeare.txt', 'r', encoding='utf-8') as f:
     text = f.read()
 
 # here are all the unique characters that occur in this text
