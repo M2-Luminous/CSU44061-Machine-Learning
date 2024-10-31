@@ -1,0 +1,40 @@
+n_embd: 128
+n_layer: 3
+n_head: 3
+block_size: 96
+
+0.613416 M parameters
+step 0: train loss 3.6804, val loss 3.6828
+step 100: train loss 2.0166, val loss 2.0241
+step 200: train loss 0.7195, val loss 0.7203
+step 300: train loss 0.4267, val loss 0.4315
+step 400: train loss 0.3926, val loss 0.3930
+step 500: train loss 0.3833, val loss 0.3860
+step 600: train loss 0.3755, val loss 0.3764
+step 700: train loss 0.3733, val loss 0.3756
+step 800: train loss 0.3658, val loss 0.3706
+step 900: train loss 0.3634, val loss 0.3655
+step 999: train loss 0.3611, val loss 0.3645
+
+Look irplane Daddy
+I climb Big hug
+Yumy apple Big truck
+Shoes on I dance
+I see plove you
+Mama I want playur big Alll done Look moon
+I hungry No stop
+Shoes on I draw
+I jump More bubbles
+I dance Yummmy apple
+No nap I draw
+I hide Come here
+Look moon I dance
+All done Come here
+I did it I wash hands
+More more Look airplane
+I did it I did it
+Look moon Uh oh spill
+I climb Shoes on I want mcookie
+More bubbles Uh oh spill
+No touch Night night Dadddy play
+I run fast Daddy read me dinosaur book before bed

@@ -1,0 +1,38 @@
+n_embd: 160
+n_layer: 3
+n_head: 4
+block_size: 96
+
+0.95492 M parameters
+step 0: train loss 3.7532, val loss 3.7512
+step 100: train loss 1.8554, val loss 1.8655
+step 200: train loss 0.5476, val loss 0.5527
+step 300: train loss 0.3993, val loss 0.4046
+step 400: train loss 0.3782, val loss 0.3791
+step 500: train loss 0.3729, val loss 0.3752
+step 600: train loss 0.3671, val loss 0.3687
+step 700: train loss 0.3663, val loss 0.3668
+step 800: train loss 0.3613, val loss 0.3629
+step 900: train loss 0.3607, val loss 0.3636
+step 999: train loss 0.3591, val loss 0.3612
+
+Daddy read me dinosaur book before bed
+I jump I rump high
+I seee ball No touch
+I jump Mored more
+I jump se I jump
+No stop Big hug
+No mine Daddy read me dinosaur book before bed
+More bubbbles Look airplane
+Daddy play Help me please Uh oh spill
+No touch All gone
+Look moon No nap
+All done My teddy
+I hide What is that
+Alll gone All gone
+More more No stop
+No nap Come here
+All done More more
+I jump want play with big fluffy doggy at park it run fast
+I tireasine Saw big fluffy doggy at park it
+I run fa
