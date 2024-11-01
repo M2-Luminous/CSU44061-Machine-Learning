@@ -1,38 +1,42 @@
-n_embd: 96
+n_embd: 192
 n_layer: 2
-n_head: 2
-block_size: 96
+n_head: 4
+block_size: 64
 
-0.240232 M parameters
-step 0: train loss 3.6825, val loss 3.6830
-step 100: train loss 2.2142, val loss 2.2181
-step 200: train loss 1.3841, val loss 1.3881
-step 300: train loss 0.5259, val loss 0.5289
-step 400: train loss 0.4376, val loss 0.4393
-step 500: train loss 0.4063, val loss 0.4070
-step 600: train loss 0.3883, val loss 0.3912
-step 700: train loss 0.3801, val loss 0.3818
-step 800: train loss 0.3733, val loss 0.3769
-step 900: train loss 0.3765, val loss 0.3766
-step 999: train loss 0.3714, val loss 0.3747
+0.916648 M parameters
+step 0: train loss 3.7265, val loss 3.7274
+step 100: train loss 1.6023, val loss 1.6120
+step 200: train loss 0.4597, val loss 0.4642
+step 300: train loss 0.4068, val loss 0.4111
+step 400: train loss 0.3969, val loss 0.3995
+step 500: train loss 0.3876, val loss 0.3912
+step 600: train loss 0.3836, val loss 0.3868
+step 700: train loss 0.3822, val loss 0.3837
+step 800: train loss 0.3788, val loss 0.3812
+step 900: train loss 0.3757, val loss 0.3786
+step 999: train loss 0.3750, val loss 0.3787
 
-I want more juice please Lok lairplane
-I jump high I ruwant cookie
-No mine All done
-I make messs
-I clove you
-Bath time I want that
-I want that I want t clarun fast
-Daddy rease I want that
-Help me please
-Read bosaill  I did it No like it
-Where ball Come here Alll
-No tove you Mamaple
-I make oore bubles
-No want bight I make maWhere ball Look airplane
-Saw big fluffy doggy at park it
-I found it I dance
-I jump high I jump
-Help me please
-I run fast Daddddy read me dinosaur book No like it
-I found it I
+No mine Look airplane
+I jump Big hug
+What is that I hungry
+I hide No like it
+I love you I found it
+No stop All done
+Read book I want that
+No mine No like it
+Come here Daddy read me dinosaur boook before bed Yummy apple
+I found it Yucmmy apple
+Go park I jump
+Daddy play I hide
+Where ball I jump All
+I wash hands Go park
+I found it All done
+I see doggy All gone
+Read book Whands pill No mine
+Look airplane I see bird
+I climb I jump high
+Big truck Big hug
+Go park All gone
+I jump
+Come here I see doggy
+N

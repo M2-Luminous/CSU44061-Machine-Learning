@@ -1,0 +1,32 @@
+1.031368 M parameters
+step 0: train loss 3.7122, val loss 3.7140
+step 100: train loss 1.9694, val loss 1.9770
+step 200: train loss 0.7857, val loss 0.7923
+step 300: train loss 0.4126, val loss 0.4153
+step 400: train loss 0.3759, val loss 0.3806
+step 500: train loss 0.3669, val loss 0.3681
+step 600: train loss 0.3607, val loss 0.3636
+step 700: train loss 0.3596, val loss 0.3628
+step 800: train loss 0.3546, val loss 0.3582
+step 900: train loss 0.3496, val loss 0.3524
+step 999: train loss 0.3510, val loss 0.3552
+Test loss: 0.3602
+Average test loss on input_childSpeech_testSet: 0.3602
+
+
+1.038593 M parameters
+step 0: train loss 4.1631, val loss 4.1629
+step 100: train loss 2.0592, val loss 2.0667
+step 200: train loss 0.7634, val loss 0.7701
+step 300: train loss 0.4075, val loss 0.4089
+step 400: train loss 0.3793, val loss 0.3823
+step 500: train loss 0.3666, val loss 0.3710
+step 600: train loss 0.3614, val loss 0.3641
+step 700: train loss 0.3602, val loss 0.3622
+step 800: train loss 0.3534, val loss 0.3574
+step 900: train loss 0.3513, val loss 0.3530
+step 999: train loss 0.3508, val loss 0.3536
+Test loss: 8.5219
+Average test loss on input_childSpeech_testSet: 8.5219
+Test loss: 8.8884
+Average test loss on input_shakespeare: 8.8884
