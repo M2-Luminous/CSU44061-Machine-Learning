@@ -67,14 +67,13 @@ def estimate_loss():
 # Parsing function to handle extra spaces
 def parse_token(token_str):
     # Expected format: "[Pitch,Duration]"
-    # May have spaces like "[ a , 1 3 ]"
     token_str = token_str.strip()
     if token_str.startswith('[') and token_str.endswith(']'):
         content = token_str[1:-1]  # strip brackets
     else:
         return None, None
 
-    # Normalize spaces: multiple spaces -> single space
+    # Normalize spaces
     content = re.sub(r'\s+', ' ', content).strip()
     parts = content.split(',')
     if len(parts) != 2:
@@ -83,7 +82,7 @@ def parse_token(token_str):
     pitch = parts[0].strip()
     duration = parts[1].strip()
 
-    # Remove internal spaces from pitch and duration
+    # Remove internal spaces
     pitch = pitch.replace(' ', '')
     duration = duration.replace(' ', '')
 
@@ -113,7 +112,7 @@ class RelativeMultiHeadAttention(nn.Module):
         rel_positions = rel_positions + block_size - 1
         rel_emb = self.rel_position(rel_positions)  # (T, T, head_size)
 
-        rel_emb = rel_emb.unsqueeze(0).unsqueeze(0)  # (1,1,T,T,head_size)
+        rel_emb = rel_emb.unsqueeze(0).unsqueeze(0)  
         rel_emb = rel_emb.repeat(B, self.num_heads, 1, 1, 1)
 
         scores = (q @ k.transpose(-2, -1)) * (1.0 / (self.head_size ** 0.5))
@@ -191,16 +190,16 @@ class GPTLanguageModel(nn.Module):
         self, idx, max_new_tokens, 
         avg_rest_duration=None, rest_duration_tolerance=1.5,
         avg_pitch_duration=None, pitch_duration_tolerance=1.5,
-        repetition_penalty=1.1
+        repetition_penalty=1.1, duration_repetition_penalty=1.05
     ):
-        def get_last_pitch(idx_seq):
+        def get_last_pitch_and_duration(idx_seq):
             if idx_seq.numel() == 0:
-                return None
+                return None, None
             last_token_str = itos[idx_seq[-1].item()]
             p, d = parse_token(last_token_str)
-            return p
+            return p, d
 
-        last_pitch = get_last_pitch(idx[0])
+        last_pitch, last_duration = get_last_pitch_and_duration(idx[0])
 
         for _ in range(max_new_tokens):
             idx_cond = idx[:, -block_size:]
@@ -208,13 +207,22 @@ class GPTLanguageModel(nn.Module):
             logits = logits[:, -1, :]
             probs = F.softmax(logits, dim=-1)
 
-            # Apply repetition penalty
+            # Apply repetition penalty for pitch
             if last_pitch is not None:
                 for i_token in range(vocab_size):
                     token_str = itos[i_token]
                     p, d = parse_token(token_str)
                     if p == last_pitch and p is not None:
                         probs[0, i_token] /= repetition_penalty
+
+            # Apply repetition penalty for duration
+            if last_duration is not None:
+                for i_token in range(vocab_size):
+                    token_str = itos[i_token]
+                    p, d = parse_token(token_str)
+                    if d is not None and d == last_duration:
+                        # Penalize repeating the exact same duration token
+                        probs[0, i_token] /= duration_repetition_penalty
 
             # Apply rest duration penalty
             if avg_rest_duration is not None:
@@ -235,13 +243,11 @@ class GPTLanguageModel(nn.Module):
                     token_str = itos[i_token]
                     p, d = parse_token(token_str)
                     if p is not None and p != 'R' and d is not None:
-                        # Check if duration_val is too low or too high
                         try:
                             duration_val = float(d)
                             lower_bound = avg_pitch_duration / pitch_duration_tolerance
                             upper_bound = avg_pitch_duration * pitch_duration_tolerance
                             if duration_val < lower_bound or duration_val > upper_bound:
-                                # Penalize durations outside the range
                                 probs[0, i_token] *= 0.1
                         except:
                             probs[0, i_token] *= 0.1
@@ -251,7 +257,7 @@ class GPTLanguageModel(nn.Module):
 
             idx_next = torch.multinomial(probs, num_samples=1)
             idx = torch.cat((idx, idx_next), dim=1)
-            last_pitch = get_last_pitch(idx[0])
+            last_pitch, last_duration = get_last_pitch_and_duration(idx[0])
 
         return idx
 
@@ -290,9 +296,24 @@ for iter in range(max_iters):
 
 context = torch.zeros((1, 1), dtype=torch.long, device=device)
 generated = model.generate(
-    context, max_new_tokens=500, 
+    context, max_new_tokens=500,
     avg_rest_duration=avg_rest_duration, rest_duration_tolerance=1.5,
     avg_pitch_duration=avg_pitch_duration, pitch_duration_tolerance=1.5,
-    repetition_penalty=1.1
+    repetition_penalty=1.1, duration_repetition_penalty=1.05
 )
-print(detokenize_melody(decode(generated[0].tolist())))
+generated_tokens = decode(generated[0].tolist())
+
+# Format and save the generated melody to a txt file
+# Each line contains 10 tokens
+tokens_list = generated_tokens.split(' ')
+lines = []
+for i in range(0, len(tokens_list), 10):
+    line = ' '.join(tokens_list[i:i+10])
+    lines.append(line)
+
+with open('generated_melody.txt', 'w', encoding='utf-8') as f:
+    for line in lines:
+        f.write(line + '\n')
+
+# Print the final generated melody
+print(detokenize_melody(tokens_list))
