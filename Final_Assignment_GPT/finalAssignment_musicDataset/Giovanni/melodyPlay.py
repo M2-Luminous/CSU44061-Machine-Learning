@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 """
 @author: Giovanni Di Liberto
@@ -74,6 +73,6 @@ song = create_sequence(sequence, duration_ms=500)  # 500ms per note
 song.export("nursery_rhyme.wav", format="wav")
 
 # Play the .wav file using simpleaudio
-wave_obj = sa.WaveObject.from_wave_file("nursery_rhyme.wav")
+wave_obj = sa.WaveObject.from_wave_file("test.wav")
 play_obj = wave_obj.play()
 play_obj.wait_done()
