@@ -77,5 +77,6 @@ def process_file(file_path):
     print(f"MIDI file '{output_file}' created successfully.")
 
 # Process the uploaded file
-file_path = 'C:/Users/M2-Winterfell/Downloads/ML/generated_melody.txt'
+file_path = 'C:/Users/M2-Winterfell/Downloads/ML/CSU44061-Machine-Learning/Final_Assignment_GPT/finalAssignment_musicDataset/MinjuanLuo/inputMelodies.txt'
+
 process_file(file_path)

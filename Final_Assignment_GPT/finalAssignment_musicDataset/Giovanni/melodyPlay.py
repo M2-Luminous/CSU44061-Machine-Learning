@@ -64,13 +64,13 @@ def create_sequence(note_sequence, duration_ms=500):
 
 # Example sequence (You can replace this with your sequence)
 #sequence = "C C G G A A G F F E E D D C G G F F E E D G G F F E E D C C G G A A G F F E E D D C".split()
-sequence = "BDDgEARagadGCCdddEgfgcDEAGBDEFgA"
+sequence = "fggfccBagRfdcdDRfFfFfFgddRaagcaBfBaRgfgfdcBagfBgfBgffccBRdfFfggaBaggffdcdddddddFgBfRfFfFcfRFfFcagfgFdRfFaRaagcagfaBBgffccBagfBccBagfggaffcfaaBBRfgfaaBgggffccddBdddcBcagfBccagaBBcacdaggaBccagfccagggdcacaggafcBaccFgfgFdRfFaRddgRffdRdccacacgcddRfdFacdEdBRdfdcdacaggffRgfaadBggagffccagcRggagffccfdRfdfFdRFaaacgagagggdcRfFgfccRABABGAGGAAGRGGGRcDADABcRBAGDcRDcDRBBBBAGGDcDcBBAGBggaBBABAGAgffcccABAGGgAfAfERDcBAGfRDccBBAAGfgABBGBGAAGAGfgABcDccBBDcBBBgAGRGgAGRGGABcDcDBCggggggfgEgfgcBBggcccgccgccgCcRcCccRca"
 
 # Create the sequence
 song = create_sequence(sequence, duration_ms=500)  # 500ms per note
 
 # Save the song to a .wav file
-song.export("nursery_rhyme.wav", format="wav")
+song.export("test.wav", format="wav")
 
 # Play the .wav file using simpleaudio
 wave_obj = sa.WaveObject.from_wave_file("test.wav")
