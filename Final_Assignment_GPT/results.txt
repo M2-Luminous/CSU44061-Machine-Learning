@@ -1,0 +1,92 @@
+n_embd: 144
+n_layer: 4
+n_head: 4
+block_size: 128
+
+step 0: train loss 2.6507, val loss 2.6456
+         train ppl 14.16, val ppl 14.09
+step 400: train loss 1.7429, val loss 1.6641
+         train ppl 5.71, val ppl 5.28
+step 800: train loss 1.6968, val loss 1.6221
+         train ppl 5.46, val ppl 5.06
+step 1200: train loss 1.6233, val loss 1.5602
+         train ppl 5.07, val ppl 4.76
+step 1600: train loss 1.4857, val loss 1.4397
+         train ppl 4.42, val ppl 4.22
+step 1999: train loss 1.4293, val loss 1.4020
+         train ppl 4.18, val ppl 4.06
+Final Model Val PPL: 4.05
+Model generated melody (sample):
+
+fggfccBagRfdcdDRfFfFfFgddRaagcaBfBaRgfgfdcBagfBgfBgffccBRdfFfggaBaggffdcdddddddFgBfRfFfFcfRFfFcagfgFdRfFaRaagcagfaBBgffccBagfBccBagfggaffcfaaBBRfgfaaBgggffccddBdddcBcagfBccagaBBcacdaggaBccagfccagggdcacaggafcBaccFgfgFdRfFaRddgRffdRdccacacgcddRfdFacdEdBRdfdcdacaggffRgfaadBggagffccagcRggagffccfdRfdfFdRFaaacgagagggdcRfFgfcc
+RABABGAGGAAGRGGGRcDADABcRBAGDcRDcDRBBBBAGGDcDcBBAGBggaBBABAGAgffcccABAGGgAfAfERDcBAGfRDccBBAAGfgABBGBGAAGAGfgABcDccBBDcBBBgAGRGgAGRGGABcDcDBCggggggfgEgfgcBBggcccgccgccgCcRcCccRca
+Baseline random melody (sample):
+GBBBGgcFDRcDEAGCaFGGAfdAgADaGDBdGEffdddFcagBAEaffaEadEEDfRDdadDBEBRfCFdGEgfRBRgBBaFFGCdcgcgfgEAfBaCEBcaFBBcaaCcGGgdCDfgBRBdCdAggcEadAEFFDFfcGRDEdCFCgcDdgfFdDCCRcEfEfRADAcaCRRgDFAEFFdCBcFfEgfFaBdggAFDDffaBAAGccaaGBFgcFCfAdARAddcFadfDfDBacEGaaRAFDCAGECdfBRgafBFGDcccdcFRaEcdCGFcRdCGDBgBBBcCcFACdGDRaFEEEFAcgCBRcfDgCagcgEdDgGGCaBF
+gcEDdEgdDgCdcFDDRDdEEBCCBRdDEGgEAARRFCGAcGcAfFdAcDaBEDEcGcfDaDgCcBRECaARCdRFDCDRaEAgfdFAGDACcCAcRRRcfaRCdgDEcGCBBGgcdBFARGCFgFBEGADFARdGcCacECRBcfGaaFCFcEFGaGBGfBadgEGDaBAB
+Baseline Approx. PPL: 23.13
+Model bigram repetition rate: 0.74
+Baseline bigram repetition rate: 0.81
+Train vs Model JS Divergence: 0.1010
+Train vs Baseline JS Divergence: 0.0026
+----- Final Evaluation Metrics -----
+Model Val PPL: 4.05
+Baseline PPL (approx): 23.13
+Model Bigram Rep Rate: 0.74
+Baseline Bigram Rep Rate: 0.81
+Train-Model JS Divergence: 0.1010
+Train-Baseline JS Divergence: 0.0026
+
+step 0: train loss 8.8290, val loss 8.8217
+         train ppl 6829.64, val ppl 6779.65
+step 400: train loss 2.2367, val loss 2.0748
+         train ppl 9.36, val ppl 7.96
+step 800: train loss 1.3001, val loss 1.2580
+         train ppl 3.67, val ppl 3.52
+step 1200: train loss 1.0564, val loss 1.0814
+         train ppl 2.88, val ppl 2.95
+step 1600: train loss 0.6638, val loss 0.7194
+         train ppl 1.94, val ppl 2.05
+step 1999: train loss 0.4187, val loss 0.4890
+         train ppl 1.52, val ppl 1.63
+Final Model Val PPL: 1.63
+Model generated melody (sample): [A,0] [R,6] [D,25]
+[R,240] [R,6] [g,13] [R,474] [g,493] [R,342] [C,367] [R,342] [c,367] [F,127] [R,240] [B,601] [B,481] [a,13] [R,240] [c,481] [R,342] [A,367] [F,127] [B,127] [R,126] [f,91] [C,7] [d,7]
+[R,1800] [R,141] [d,145] [g,121] [R,6]
+Baseline random melody (sample): [A,13] [g,7] [F,2] [f,25] [a,2] [g,1] [d,13] [f,7] [B,7] [d,2] [c,13] [D,13] [R,1434] [R,228] [R,1260] [R,6] [E,2] [c,13] [f,9] [d,13] [D,13] [R,425] [a,1200] [R,6] [G,0] [R,255] [c,25] [F,7] [c,367] [F,7]
+----- Final Evaluation Metrics -----
+Model Val PPL: 1.63
+Baseline PPL (approx): 6675.00
+Model Bigram Rep Rate: 0.43
+Baseline Bigram Rep Rate: 0.01
+Train-Model JS Divergence: 0.5277
+Train-Baseline JS Divergence: 0.1491
+
+step 0: train loss 6.9786, val loss 6.9880
+         train ppl 1073.38, val ppl 1083.54
+step 400: train loss 1.5478, val loss 1.3944
+         train ppl 4.70, val ppl 4.03
+step 800: train loss 1.1668, val loss 1.1073
+         train ppl 3.21, val ppl 3.03
+step 1200: train loss 0.8849, val loss 0.8766
+         train ppl 2.42, val ppl 2.40
+step 1600: train loss 0.6738, val loss 0.7003
+         train ppl 1.96, val ppl 2.01
+step 1999: train loss 0.5218, val loss 0.5628
+         train ppl 1.69, val ppl 1.76
+Final Model Val PPL: 1.76
+Model generated (sample):
+[0, 25, 25, 7, 630, 547, 13, 7, 7, 6, 13]
+Baseline random (sample):
+[2, 2, 13, 13, 37, 1, 354, 13, 7, 13]
+Baseline Approx. PPL: 22.33
+Model bigram repetition rate: 0.00
+Baseline bigram repetition rate: 0.00
+Train vs Model JS Divergence: 0.0331
+Train vs Baseline JS Divergence: 0.0000
+----- Final Evaluation Metrics -----
+Model Val PPL: 1.76
+Baseline PPL (approx): 22.33
+Model Bigram Rep Rate: 0.00
+Baseline Bigram Rep Rate: 0.00
+Train-Model JS Divergence: 0.0331
+Train-Baseline JS Divergence: 0.0000
